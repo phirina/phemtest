@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AbsoluteLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="142dp"
+        android:layout_y="11dp"
+        android:text="Jump"
+        tools:layout_editor_absoluteX="129dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="257dp"
+        android:layout_y="12dp"
+        android:text="Sit up"
+        tools:layout_editor_absoluteX="239dp"
+        tools:layout_editor_absoluteY="60dp" />
+
+    <Switch
+        android:id="@+id/switch1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="24dp"
+        android:layout_y="22dp"
+        android:text="Switch"
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="73dp" />
+</AbsoluteLayout>
