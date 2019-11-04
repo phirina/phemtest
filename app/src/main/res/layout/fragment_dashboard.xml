@@ -10,8 +10,9 @@
         android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="142dp"
-        android:layout_y="11dp"
+        android:layout_x="135dp"
+        android:layout_y="3dp"
+        android:background="@color/colorBtn"
         android:text="Jump"
         tools:layout_editor_absoluteX="129dp"
         tools:layout_editor_absoluteY="60dp" />
@@ -20,8 +21,9 @@
         android:id="@+id/button3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="257dp"
-        android:layout_y="12dp"
+        android:layout_x="253dp"
+        android:layout_y="3dp"
+        android:background="@color/colorBtn"
         android:text="Sit up"
         tools:layout_editor_absoluteX="239dp"
         tools:layout_editor_absoluteY="60dp" />
@@ -30,9 +32,71 @@
         android:id="@+id/switch1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="24dp"
-        android:layout_y="22dp"
+        android:layout_x="21dp"
+        android:layout_y="15dp"
         android:text="Switch"
         tools:layout_editor_absoluteX="21dp"
         tools:layout_editor_absoluteY="73dp" />
+
+    <RelativeLayout
+        android:id="@+id/layout_joystick"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="36dp"
+        android:layout_x="81dp"
+        android:layout_y="101dp"
+        android:background="@drawable/image_button_bg">
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="87dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_x="21dp"
+        android:layout_y="315dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="X"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Y"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Angle"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Distance"
+            android:textColor="#444444" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Direction"
+            android:textColor="#444444" />
+    </LinearLayout>
+
 </AbsoluteLayout>
