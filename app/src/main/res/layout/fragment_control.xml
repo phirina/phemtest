@@ -5,15 +5,42 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="62dp"
+        android:layout_y="8dp"
+        android:text="Speed" />
+
+    <SeekBar
+        android:id="@+id/seekBar2"
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:layout_x="5dp"
+        android:layout_y="37dp" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_x="244dp"
+        android:layout_y="102dp"
+        android:background="@color/stopBtn"
+        android:text="Stop"
+        android:textColor="@color/colorAccent2"/>
+
     <Button
         android:id="@+id/button2"
-        android:layout_width="107dp"
+        android:layout_width="106dp"
         android:layout_height="wrap_content"
-        android:layout_x="231dp"
-        android:layout_y="380dp"
+        android:layout_x="244dp"
+        android:layout_y="41dp"
         android:background="@color/colorAccent"
         android:text="Jump"
-        android:textColor="#D1D1D1"
+        android:textColor="@color/textColorBtn"
         tools:layout_editor_absoluteX="129dp"
         tools:layout_editor_absoluteY="60dp" />
 
@@ -28,21 +55,20 @@
         tools:layout_editor_absoluteY="73dp" />
 
 
-
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="201dp"
-        android:layout_height="31dp"
-        android:layout_x="14dp"
-        android:layout_y="395dp" />
+        android:layout_width="200dp"
+        android:layout_height="34dp"
+        android:layout_x="5dp"
+        android:layout_y="113dp" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_x="68dp"
-        android:layout_y="373dp"
-        android:text="Sit down" />
+        android:layout_x="62dp"
+        android:layout_y="90dp"
+        android:text="Body position" />
 
     <RelativeLayout
         android:id="@+id/layout_joystick"
@@ -51,8 +77,8 @@
         android:layout_alignParentRight="true"
         android:layout_centerVertical="true"
         android:layout_marginRight="36dp"
-        android:layout_x="91dp"
-        android:layout_y="154dp"
+        android:layout_x="143dp"
+        android:layout_y="234dp"
         android:background="@drawable/image">
 
     </RelativeLayout>
@@ -66,39 +92,18 @@
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
         android:layout_x="12dp"
-        android:layout_y="28dp"
+        android:layout_y="228dp"
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/textView1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="X"
-            android:textColor="#444444" />
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Y"
-            android:textColor="#444444" />
-
-        <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/joystick_angle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Angle"
             android:textColor="#444444" />
 
         <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Distance"
-            android:textColor="#444444" />
-
-        <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/joystick_direction"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Direction"

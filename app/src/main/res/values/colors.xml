@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+<!--    <color name="colorPrimary">#7b0d1e</color>-->
     <color name="colorPrimary">#70587c</color>
+<!--    <color name="colorPrimaryDark">#f8e5ee</color>-->
     <color name="colorPrimaryDark">#c8b8db</color>
     <color name="colorAccent">#50514F</color>
     <color name="colorAccent2">#484349</color>
@@ -9,6 +11,8 @@
     <color name="jExternal">#468189</color>
     <color name="jExternalv2">#77ACA2</color>
     <color name="jExternalv3">#F4E9CD</color>
+    <color name="stopBtn">#ef7873</color>
+    <color name="textColorBtn">#E1E1E1</color>
 <!--    #EAF2EF-->
 <!--    https://coolors.co/eaf2ef-912f56-521945-361f27-0d090a-->
 

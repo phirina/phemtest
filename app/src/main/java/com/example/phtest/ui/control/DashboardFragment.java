@@ -20,7 +20,7 @@ public class DashboardFragment extends Fragment {
     private DashboardViewModel dashboardViewModel;
     RelativeLayout layout_joystick;
     ImageView image_joystick, image_border;
-    TextView textView1, textView2, textView3, textView4, textView5;
+    TextView  textView3, textView5;
 
     JoyStickClass js;
 
@@ -30,11 +30,8 @@ public class DashboardFragment extends Fragment {
                 ViewModelProviders.of(this).get(DashboardViewModel.class);
         View root = inflater.inflate(R.layout.fragment_control, container, false);
 
-        textView1 = root.findViewById(R.id.textView1);
-        textView2 = root.findViewById(R.id.textView2);
-        textView3 = root.findViewById(R.id.textView3);
-        textView4 = root.findViewById(R.id.textView4);
-        textView5 = root.findViewById(R.id.textView5);
+        textView3 = root.findViewById(R.id.joystick_angle);
+        textView5 = root.findViewById(R.id.joystick_direction);
 
         layout_joystick = root.findViewById(R.id.layout_joystick);
 
@@ -52,10 +49,7 @@ public class DashboardFragment extends Fragment {
                 js.drawStick(arg1);
                 if(arg1.getAction() == MotionEvent.ACTION_DOWN
                         || arg1.getAction() == MotionEvent.ACTION_MOVE) {
-                    textView1.setText("X : " + String.valueOf(js.getX()));
-                    textView2.setText("Y : " + String.valueOf(js.getY()));
                     textView3.setText("Angle : " + String.valueOf(js.getAngle()));
-                    textView4.setText("Distance : " + String.valueOf(js.getDistance()));
 
                     int direction = js.get8Direction();
                     if(direction == JoyStickClass.STICK_UP) {
@@ -78,10 +72,7 @@ public class DashboardFragment extends Fragment {
                         textView5.setText("Direction : Center");
                     }
                 } else if(arg1.getAction() == MotionEvent.ACTION_UP) {
-                    textView1.setText("X :");
-                    textView2.setText("Y :");
                     textView3.setText("Angle :");
-                    textView4.setText("Distance :");
                     textView5.setText("Direction :");
                 }
                 return true;
