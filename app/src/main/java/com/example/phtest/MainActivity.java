@@ -12,12 +12,14 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.example.phtest.ui.bluetooth.MainViewModel;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.Set;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -25,11 +27,13 @@ import androidx.navigation.ui.NavigationUI;
 
 public class MainActivity extends AppCompatActivity {
 
-
+    private MainViewModel viewModel;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        viewModel = ViewModelProviders.of(this).get(MainViewModel.class);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 

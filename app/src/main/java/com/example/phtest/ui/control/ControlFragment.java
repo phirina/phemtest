@@ -15,16 +15,13 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
-import com.example.phtest.MainActivity;
 import com.example.phtest.R;
-import com.example.phtest.ui.bluetooth.HomeFragment;
+import com.example.phtest.ui.bluetooth.BluetoothFragment;
+import com.example.phtest.ui.bluetooth.MainViewModel;
 
-import java.util.Objects;
+public class ControlFragment extends Fragment {
 
-public class DashboardFragment extends Fragment {
-
-    private DashboardViewModel dashboardViewModel;
-    HomeFragment activity;
+    private ControlViewModel dashboardViewModel;
     RelativeLayout layout_joystick;
     ImageView image_joystick, image_border;
     TextView  textView3, textView5;
@@ -35,7 +32,7 @@ public class DashboardFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         dashboardViewModel =
-                ViewModelProviders.of(this).get(DashboardViewModel.class);
+                ViewModelProviders.of(this).get(ControlViewModel.class);
         View root = inflater.inflate(R.layout.fragment_control, container, false);
 
         textView3 = root.findViewById(R.id.joystick_angle);
@@ -93,17 +90,18 @@ public class DashboardFragment extends Fragment {
         stop_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                activity = (HomeFragment) getTargetFragment();
-                HomeFragment fragment = (HomeFragment)getParentFragment();
-                if((fragment.getmConnectedThread() != null)) //First check to make sure thread created
-                fragment.getmConnectedThread().write("1");
+                MainViewModel mainViewModel =  ViewModelProviders.of((FragmentActivity) getActivity()).get(MainViewModel.class);
+                if((mainViewModel.getConnectedThread() != null)) //First check to make sure thread created
+                mainViewModel.getConnectedThread().write("1");
             }
         });
 
         jump_btn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-
+                MainViewModel mainViewModel =  ViewModelProviders.of((FragmentActivity) getActivity()).get(MainViewModel.class);
+                if((mainViewModel.getConnectedThread() != null)) //First check to make sure thread created
+                    mainViewModel.getConnectedThread().write("0");
             }
         });
         return root;

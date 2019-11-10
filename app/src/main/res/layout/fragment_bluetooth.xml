@@ -42,21 +42,5 @@
         android:text="Scan"
         android:textColor="@color/textColorBtn" />
 
-    <Button
-        android:id="@+id/On_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="26dp"
-        android:layout_y="342dp"
-        android:text="On" />
-
-    <Button
-        android:id="@+id/Off_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="126dp"
-        android:layout_y="344dp"
-        android:text="Off" />
-
 
 </AbsoluteLayout>
