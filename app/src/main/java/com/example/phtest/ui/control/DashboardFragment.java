@@ -5,22 +5,30 @@ import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.phtest.MainActivity;
 import com.example.phtest.R;
+import com.example.phtest.ui.bluetooth.HomeFragment;
+
+import java.util.Objects;
 
 public class DashboardFragment extends Fragment {
 
     private DashboardViewModel dashboardViewModel;
+    HomeFragment activity;
     RelativeLayout layout_joystick;
     ImageView image_joystick, image_border;
     TextView  textView3, textView5;
+    Button stop_btn, jump_btn;
 
     JoyStickClass js;
 
@@ -32,6 +40,8 @@ public class DashboardFragment extends Fragment {
 
         textView3 = root.findViewById(R.id.joystick_angle);
         textView5 = root.findViewById(R.id.joystick_direction);
+        jump_btn = root.findViewById(R.id.jump_btn);
+        stop_btn = root.findViewById(R.id.stop_btn);
 
         layout_joystick = root.findViewById(R.id.layout_joystick);
 
@@ -76,6 +86,24 @@ public class DashboardFragment extends Fragment {
                     textView5.setText("Direction :");
                 }
                 return true;
+            }
+        });
+
+
+        stop_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                activity = (HomeFragment) getTargetFragment();
+                HomeFragment fragment = (HomeFragment)getParentFragment();
+                if((fragment.getmConnectedThread() != null)) //First check to make sure thread created
+                fragment.getmConnectedThread().write("1");
+            }
+        });
+
+        jump_btn.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
             }
         });
         return root;
